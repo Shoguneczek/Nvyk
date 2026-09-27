@@ -1,0 +1,18 @@
+{
+  "name": "Návyk – sledování návyků",
+  "short_name": "Návyk",
+  "id": "/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5F4EF",
+  "theme_color": "#256C58",
+  "orientation": "portrait",
+  "lang": "cs",
+  "description": "Jednoduché sledování denních návyků se sériemi (streaky).",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
