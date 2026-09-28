@@ -29,38 +29,23 @@
     --shadow: 0 10px 26px rgba(27,35,32,0.08);
   }
   :root[data-theme="dark"] {
-    --bg: #121613;
-    --card: #1B211D;
-    --ink: #EDEFEB;
-    --ink-soft: #8FA098;
-    --line: #2A322D;
-    --accent: #5FB596;
-    --accent-soft: #1E2C26;
-    --hero-a: #10241E;
-    --hero-b: #163B30;
-    --ring-track: rgba(255,255,255,0.14);
+    --bg: #121613; --card: #1B211D; --ink: #EDEFEB; --ink-soft: #8FA098;
+    --line: #2A322D; --accent: #5FB596; --accent-soft: #1E2C26;
+    --hero-a: #10241E; --hero-b: #163B30; --ring-track: rgba(255,255,255,0.14);
     --shadow: 0 10px 26px rgba(0,0,0,0.35);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #121613;
-      --card: #1B211D;
-      --ink: #EDEFEB;
-      --ink-soft: #8FA098;
-      --line: #2A322D;
-      --accent: #5FB596;
-      --accent-soft: #1E2C26;
-      --hero-a: #10241E;
-      --hero-b: #163B30;
-      --ring-track: rgba(255,255,255,0.14);
+      --bg: #121613; --card: #1B211D; --ink: #EDEFEB; --ink-soft: #8FA098;
+      --line: #2A322D; --accent: #5FB596; --accent-soft: #1E2C26;
+      --hero-a: #10241E; --hero-b: #163B30; --ring-track: rgba(255,255,255,0.14);
       --shadow: 0 10px 26px rgba(0,0,0,0.35);
     }
   }
   html, body { height: 100%; margin: 0; }
   * { box-sizing: border-box; }
   body {
-    background: var(--bg);
-    color: var(--ink);
+    background: var(--bg); color: var(--ink);
     font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     -webkit-font-smoothing: antialiased;
     padding-top: env(safe-area-inset-top, 0px);
@@ -70,49 +55,31 @@
 
   .hero {
     background: linear-gradient(155deg, var(--hero-a), var(--hero-b));
-    border-radius: 0 0 28px 28px;
-    margin: 0 -16px 20px;
+    border-radius: 0 0 28px 28px; margin: 0 -16px 20px;
     padding: calc(18px + env(safe-area-inset-top,0px)) 20px 22px;
-    color: #F4FBF8;
-    display: flex;
-    align-items: center;
-    gap: 18px;
+    color: #F4FBF8; display: flex; align-items: center; gap: 14px;
   }
   .hero-text { flex: 1; min-width: 0; }
   .hero-eyebrow { font-size: 13px; opacity: 0.75; margin: 0 0 2px; text-transform: capitalize; }
   .hero-title { font-size: 22px; font-weight: 800; margin: 0 0 10px; letter-spacing: -0.02em; }
   .hero-sub { font-size: 13px; opacity: 0.8; }
-  .theme-btn {
+  .icon-round-btn {
     border: none; background: rgba(255,255,255,0.14); color: #F4FBF8;
-    width: 38px; height: 38px; border-radius: 50%; font-size: 17px;
+    width: 36px; height: 36px; border-radius: 50%; font-size: 13px; font-weight: 700;
     cursor: pointer; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    font-family: inherit;
   }
-  .ring-wrap { position: relative; width: 74px; height: 74px; flex-shrink: 0; }
+  .ring-wrap { position: relative; width: 70px; height: 70px; flex-shrink: 0; }
   .ring-wrap svg { transform: rotate(-90deg); }
   .ring-track { stroke: var(--ring-track); }
   .ring-fill { stroke: #F4FBF8; stroke-linecap: round; transition: stroke-dashoffset 0.5s ease; }
-  .ring-label {
-    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-    font-weight: 800; font-size: 16px;
-  }
+  .ring-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; }
 
   .section-title { font-size: 13px; color: var(--ink-soft); margin: 4px 2px 10px; font-weight: 600; }
 
   .habits { display: flex; flex-direction: column; gap: 10px; }
-  .habit {
-    background: var(--card);
-    border-radius: 18px;
-    padding: 13px 12px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: var(--shadow);
-  }
-  .icon-btn {
-    width: 44px; height: 44px; border-radius: 14px; border: none;
-    font-size: 20px; flex-shrink: 0; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-  }
+  .habit { background: var(--card); border-radius: 18px; padding: 13px 12px; display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow); }
+  .icon-btn { width: 44px; height: 44px; border-radius: 14px; border: none; font-size: 20px; flex-shrink: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; }
   .habit-body { flex: 1; min-width: 0; }
   .habit-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
   .habit-name { font-weight: 700; font-size: 15.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -121,30 +88,19 @@
   .dots { display: flex; gap: 5px; margin-top: 8px; }
   .dot { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid var(--line); flex-shrink: 0; }
   .dot.today { box-shadow: 0 0 0 2px var(--accent-soft); }
-  .check {
-    width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--line);
-    background: transparent; flex-shrink: 0; cursor: pointer; font-size: 15px;
-    display: flex; align-items: center; justify-content: center; color: transparent;
-    transition: transform .12s ease;
-  }
+  .check { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--line); background: transparent; flex-shrink: 0; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; color: transparent; transition: transform .12s ease; }
   .check:active { transform: scale(0.88); }
   .check.done { color: white; border-color: transparent; }
-  .menu-btn { border: none; background: transparent; color: var(--ink-soft); font-size: 18px; padding: 4px 2px; cursor: pointer; flex-shrink: 0; }
 
   .empty { text-align: center; color: var(--ink-soft); padding: 44px 12px; border: 1px dashed var(--line); border-radius: 18px; }
 
-  .fab {
-    position: fixed; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom, 0px));
-    transform: translateX(-50%); background: var(--accent); color: white; border: none;
-    border-radius: 999px; padding: 14px 26px; font-size: 15px; font-weight: 700;
-    font-family: inherit; box-shadow: 0 10px 26px rgba(0,0,0,0.22); cursor: pointer;
-  }
+  .fab { position: fixed; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--accent); color: white; border: none; border-radius: 999px; padding: 14px 26px; font-size: 15px; font-weight: 700; font-family: inherit; box-shadow: 0 10px 26px rgba(0,0,0,0.22); cursor: pointer; }
 
   .ad-slot { margin-top: 18px; border: 1px dashed var(--line); border-radius: 14px; padding: 12px; text-align: center; color: var(--ink-soft); font-size: 12px; }
 
   .sheet-backdrop { position: fixed; inset: 0; background: rgba(10,14,12,0.45); display: none; align-items: flex-end; justify-content: center; z-index: 10; }
   .sheet-backdrop.open { display: flex; }
-  .sheet { background: var(--bg); width: 100%; max-width: 480px; border-radius: 22px 22px 0 0; padding: 22px 20px calc(24px + env(safe-area-inset-bottom, 0px)); }
+  .sheet { background: var(--bg); width: 100%; max-width: 480px; border-radius: 22px 22px 0 0; padding: 22px 20px calc(24px + env(safe-area-inset-bottom, 0px)); max-height: 80vh; overflow-y: auto; }
   .sheet h2 { margin: 0 0 14px; font-size: 18px; }
   .sheet input { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font-family: inherit; font-size: 16px; margin-bottom: 14px; }
   .picker-label { font-size: 12.5px; color: var(--ink-soft); font-weight: 600; margin: 0 0 8px; }
@@ -159,6 +115,10 @@
   .btn-primary { background: var(--accent); color: white; }
   .btn-ghost { background: var(--accent-soft); color: var(--accent); }
   .btn-danger { background: #F5DEDA; color: #A8402E; }
+
+  .lang-list { display: flex; flex-direction: column; gap: 8px; }
+  .lang-opt { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); cursor: pointer; font-family: inherit; font-size: 15px; color: var(--ink); }
+  .lang-opt.sel { border-color: var(--accent); background: var(--accent-soft); }
 </style>
 </head>
 <body>
@@ -166,45 +126,50 @@
   <div class="hero">
     <div class="hero-text">
       <p class="hero-eyebrow" id="dateLabel"></p>
-      <p class="hero-title">Dnešní návyky</p>
-      <p class="hero-sub" id="heroSub">Zatím nic nesplněno</p>
+      <p class="hero-title" data-i18n="title">Dnešní návyky</p>
+      <p class="hero-sub" id="heroSub"></p>
     </div>
     <div class="ring-wrap">
-      <svg width="74" height="74" viewBox="0 0 74 74">
+      <svg width="70" height="70" viewBox="0 0 74 74">
         <circle class="ring-track" cx="37" cy="37" r="30" fill="none" stroke-width="7"/>
         <circle class="ring-fill" id="ringFill" cx="37" cy="37" r="30" fill="none" stroke-width="7" stroke-dasharray="188.5" stroke-dashoffset="188.5"/>
       </svg>
       <div class="ring-label" id="ringLabel">0/0</div>
     </div>
-    <button class="theme-btn" id="themeBtn" title="Přepnout motiv">◐</button>
+    <button class="icon-round-btn" id="langBtn" title="Language">CZ</button>
+    <button class="icon-round-btn" id="themeBtn" title="Theme">◐</button>
   </div>
 
-  <p class="section-title">Tvoje návyky</p>
+  <p class="section-title" data-i18n="section">Tvoje návyky</p>
   <div class="habits" id="habitList"></div>
 
-  <div class="ad-slot" id="adSlot">
-    Místo pro reklamní banner<br>
-    (web verze: AdSense · appka: AdMob — viz níže)
-  </div>
+  <div class="ad-slot" data-i18n="adSlot">Místo pro reklamní banner</div>
 </div>
 
-<button class="fab" id="openAdd">+ Přidat návyk</button>
+<button class="fab" id="openAdd" data-i18n="fab">+ Přidat návyk</button>
 
 <div class="sheet-backdrop" id="sheetBackdrop">
   <div class="sheet">
     <h2 id="sheetTitle">Nový návyk</h2>
-    <input id="newHabitName" placeholder="Např. Meditace, Čtení, Pití vody…" maxlength="40">
-    <p class="picker-label">Ikonka</p>
+    <input id="newHabitName" data-i18n-placeholder="namePlaceholder" maxlength="40">
+    <p class="picker-label" data-i18n="iconLabel">Ikonka</p>
     <div class="emoji-grid" id="emojiGrid"></div>
-    <p class="picker-label">Barva</p>
+    <p class="picker-label" data-i18n="colorLabel">Barva</p>
     <div class="color-row" id="colorRow"></div>
     <div class="sheet-actions">
-      <button class="btn btn-ghost" id="cancelAdd">Zrušit</button>
-      <button class="btn btn-primary" id="confirmAdd">Uložit</button>
+      <button class="btn btn-ghost" id="cancelAdd" data-i18n="cancel">Zrušit</button>
+      <button class="btn btn-primary" id="confirmAdd" data-i18n="save">Uložit</button>
     </div>
     <div class="sheet-actions" id="deleteRow" style="display:none; margin-top:10px;">
-      <button class="btn btn-danger" id="deleteHabit">Smazat návyk</button>
+      <button class="btn btn-danger" id="deleteHabit" data-i18n="delete">Smazat návyk</button>
     </div>
+  </div>
+</div>
+
+<div class="sheet-backdrop" id="langBackdrop">
+  <div class="sheet">
+    <h2 data-i18n="langTitle">Jazyk</h2>
+    <div class="lang-list" id="langList"></div>
   </div>
 </div>
 
@@ -212,8 +177,54 @@
 (function(){
   const STORAGE_KEY = 'habit-tracker-v2';
   const OLD_KEY = 'habit-tracker-v1';
+  const LANG_KEY = 'habit-tracker-lang';
   const EMOJIS = ['⭐','💧','📖','🧘','🏃','🥗','😴','✍️','🎯','🚭','💪','🎨'];
   const COLORS = ['#256C58','#E2963A','#7C5CBF','#E2725B','#3E7CB1','#7C8C4B'];
+  const LANGS = ['cs','en','de','es','sk','pl','fr'];
+  const LANG_NAMES = { cs:'Čeština', en:'English', de:'Deutsch', es:'Español', sk:'Slovenčina', pl:'Polski', fr:'Français' };
+  const LANG_LOCALE = { cs:'cs-CZ', en:'en-US', de:'de-DE', es:'es-ES', sk:'sk-SK', pl:'pl-PL', fr:'fr-FR' };
+
+  const I18N = {
+    cs: { title:'Dnešní návyky', section:'Tvoje návyky', adSlot:'Místo pro reklamní banner', fab:'+ Přidat návyk',
+      sheetNew:'Nový návyk', sheetEdit:'Upravit návyk', namePlaceholder:'Např. Meditace, Čtení, Pití vody…',
+      iconLabel:'Ikonka', colorLabel:'Barva', cancel:'Zrušit', save:'Uložit', delete:'Smazat návyk',
+      langTitle:'Jazyk', empty:'Zatím žádné návyky.<br>Přidej první tlačítkem dole.',
+      allDone:'Všechno splněno, skvělá práce!', remaining:(n,t)=>`Zbývá ${n} z ${t}`, addFirst:'Přidej svůj první návyk' },
+    en: { title:"Today's habits", section:'Your habits', adSlot:'Ad banner placeholder', fab:'+ Add habit',
+      sheetNew:'New habit', sheetEdit:'Edit habit', namePlaceholder:'E.g. Meditation, Reading, Drinking water…',
+      iconLabel:'Icon', colorLabel:'Color', cancel:'Cancel', save:'Save', delete:'Delete habit',
+      langTitle:'Language', empty:'No habits yet.<br>Add your first one with the button below.',
+      allDone:'All done, great job!', remaining:(n,t)=>`${n} of ${t} left`, addFirst:'Add your first habit' },
+    de: { title:'Heutige Gewohnheiten', section:'Deine Gewohnheiten', adSlot:'Platzhalter für Werbebanner', fab:'+ Gewohnheit hinzufügen',
+      sheetNew:'Neue Gewohnheit', sheetEdit:'Gewohnheit bearbeiten', namePlaceholder:'Z. B. Meditation, Lesen, Wasser trinken…',
+      iconLabel:'Symbol', colorLabel:'Farbe', cancel:'Abbrechen', save:'Speichern', delete:'Gewohnheit löschen',
+      langTitle:'Sprache', empty:'Noch keine Gewohnheiten.<br>Füge unten deine erste hinzu.',
+      allDone:'Alles erledigt, super gemacht!', remaining:(n,t)=>`${n} von ${t} übrig`, addFirst:'Füge deine erste Gewohnheit hinzu' },
+    es: { title:'Hábitos de hoy', section:'Tus hábitos', adSlot:'Espacio para banner publicitario', fab:'+ Añadir hábito',
+      sheetNew:'Nuevo hábito', sheetEdit:'Editar hábito', namePlaceholder:'P. ej. Meditar, Leer, Beber agua…',
+      iconLabel:'Icono', colorLabel:'Color', cancel:'Cancelar', save:'Guardar', delete:'Eliminar hábito',
+      langTitle:'Idioma', empty:'Aún no hay hábitos.<br>Añade el primero con el botón de abajo.',
+      allDone:'¡Todo hecho, buen trabajo!', remaining:(n,t)=>`Quedan ${n} de ${t}`, addFirst:'Añade tu primer hábito' },
+    sk: { title:'Dnešné návyky', section:'Tvoje návyky', adSlot:'Miesto pre reklamný banner', fab:'+ Pridať návyk',
+      sheetNew:'Nový návyk', sheetEdit:'Upraviť návyk', namePlaceholder:'Napr. Meditácia, Čítanie, Pitie vody…',
+      iconLabel:'Ikonka', colorLabel:'Farba', cancel:'Zrušiť', save:'Uložiť', delete:'Zmazať návyk',
+      langTitle:'Jazyk', empty:'Zatiaľ žiadne návyky.<br>Pridaj prvý tlačidlom dole.',
+      allDone:'Všetko splnené, skvelá práca!', remaining:(n,t)=>`Zostáva ${n} z ${t}`, addFirst:'Pridaj svoj prvý návyk' },
+    pl: { title:'Dzisiejsze nawyki', section:'Twoje nawyki', adSlot:'Miejsce na baner reklamowy', fab:'+ Dodaj nawyk',
+      sheetNew:'Nowy nawyk', sheetEdit:'Edytuj nawyk', namePlaceholder:'Np. Medytacja, Czytanie, Picie wody…',
+      iconLabel:'Ikonka', colorLabel:'Kolor', cancel:'Anuluj', save:'Zapisz', delete:'Usuń nawyk',
+      langTitle:'Język', empty:'Brak nawyków.<br>Dodaj pierwszy przyciskiem poniżej.',
+      allDone:'Wszystko zrobione, świetna robota!', remaining:(n,t)=>`Zostało ${n} z ${t}`, addFirst:'Dodaj swój pierwszy nawyk' },
+    fr: { title:'Habitudes du jour', section:'Vos habitudes', adSlot:'Emplacement de bannière publicitaire', fab:"+ Ajouter une habitude",
+      sheetNew:'Nouvelle habitude', sheetEdit:"Modifier l'habitude", namePlaceholder:'Ex. Méditation, Lecture, Boire de l\u2019eau…',
+      iconLabel:'Icône', colorLabel:'Couleur', cancel:'Annuler', save:'Enregistrer', delete:"Supprimer l'habitude",
+      langTitle:'Langue', empty:"Pas encore d'habitudes.<br>Ajoutez-en une avec le bouton ci-dessous.",
+      allDone:'Tout est fait, bravo !', remaining:(n,t)=>`${n} sur ${t} restantes`, addFirst:'Ajoutez votre première habitude' }
+  };
+
+  let currentLang = 'cs';
+  function t(key) { return (I18N[currentLang] && I18N[currentLang][key]) || I18N.en[key] || key; }
+
   const todayStr = () => new Date().toISOString().slice(0,10);
   const dayDiff = (a,b) => Math.round((new Date(b) - new Date(a)) / 86400000);
 
@@ -252,8 +263,7 @@
   function last7(h) {
     const days = [];
     for (let i = 6; i >= 0; i--) {
-      const d = new Date();
-      d.setDate(d.getDate() - i);
+      const d = new Date(); d.setDate(d.getDate() - i);
       const key = d.toISOString().slice(0,10);
       days.push({ key, done: h.log.includes(key), isToday: i === 0 });
     }
@@ -266,7 +276,7 @@
     const list = document.getElementById('habitList');
     list.innerHTML = '';
     if (!habits.length) {
-      list.innerHTML = '<div class="empty">Zatím žádné návyky.<br>Přidej první tlačítkem dole.</div>';
+      list.innerHTML = `<div class="empty">${t('empty')}</div>`;
     }
     let doneCount = 0;
     habits.forEach(h => {
@@ -294,8 +304,8 @@
     });
     document.getElementById('ringLabel').textContent = `${doneCount}/${habits.length}`;
     document.getElementById('heroSub').textContent = habits.length
-      ? (doneCount === habits.length ? 'Všechno splněno, skvělá práce!' : `Zbývá ${habits.length - doneCount} z ${habits.length}`)
-      : 'Přidej svůj první návyk';
+      ? (doneCount === habits.length ? t('allDone') : t('remaining')(habits.length - doneCount, habits.length))
+      : t('addFirst');
     const circumference = 188.5;
     const pct = habits.length ? doneCount / habits.length : 0;
     document.getElementById('ringFill').style.strokeDashoffset = circumference * (1 - pct);
@@ -306,11 +316,10 @@
     const editBtn = e.target.closest('[data-edit]');
     if (checkBtn) {
       const h = habits.find(x => x.id === checkBtn.dataset.id);
-      const t = todayStr();
-      const idx = h.log.indexOf(t);
-      if (idx >= 0) h.log.splice(idx, 1); else h.log.push(t);
-      save(habits);
-      render();
+      const t2 = todayStr();
+      const idx = h.log.indexOf(t2);
+      if (idx >= 0) h.log.splice(idx, 1); else h.log.push(t2);
+      save(habits); render();
     } else if (editBtn) {
       openSheet(editBtn.dataset.edit);
     }
@@ -329,7 +338,7 @@
   function openSheet(id) {
     editingId = id || null;
     const h = id ? habits.find(x => x.id === id) : null;
-    document.getElementById('sheetTitle').textContent = h ? 'Upravit návyk' : 'Nový návyk';
+    document.getElementById('sheetTitle').textContent = h ? t('sheetEdit') : t('sheetNew');
     document.getElementById('newHabitName').value = h ? h.name : '';
     pickedEmoji = h ? h.emoji : EMOJIS[Math.floor(Math.random()*EMOJIS.length)];
     pickedColor = h ? h.color : COLORS[habits.length % COLORS.length];
@@ -351,21 +360,17 @@
     } else {
       habits.push({ id: Date.now().toString(36) + Math.random().toString(36).slice(2,6), name, emoji: pickedEmoji, color: pickedColor, log: [] });
     }
-    save(habits);
-    backdrop.classList.remove('open');
-    render();
+    save(habits); backdrop.classList.remove('open'); render();
   };
   document.getElementById('deleteHabit').onclick = () => {
     habits = habits.filter(x => x.id !== editingId);
-    save(habits);
-    backdrop.classList.remove('open');
-    render();
+    save(habits); backdrop.classList.remove('open'); render();
   };
   document.getElementById('newHabitName').addEventListener('keydown', (e) => { if (e.key === 'Enter') document.getElementById('confirmAdd').click(); });
 
   const themeBtn = document.getElementById('themeBtn');
-  function applyTheme(t) {
-    if (t) document.documentElement.setAttribute('data-theme', t);
+  function applyTheme(theme) {
+    if (theme) document.documentElement.setAttribute('data-theme', theme);
     else document.documentElement.removeAttribute('data-theme');
   }
   let savedTheme = null;
@@ -379,16 +384,43 @@
     try { localStorage.setItem('habit-tracker-theme', next); } catch(e) {}
   };
 
-  document.getElementById('dateLabel').textContent = new Date().toLocaleDateString('cs-CZ', { weekday: 'long', day: 'numeric', month: 'long' });
+  function applyLang(lang) {
+    currentLang = LANGS.includes(lang) ? lang : 'en';
+    try { localStorage.setItem(LANG_KEY, currentLang); } catch(e) {}
+    document.documentElement.lang = currentLang;
+    document.getElementById('langBtn').textContent = currentLang.toUpperCase();
+    document.querySelectorAll('[data-i18n]').forEach(el => { el.innerHTML = t(el.dataset.i18n); });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = t(el.dataset.i18nPlaceholder); });
+    document.getElementById('dateLabel').textContent = new Date().toLocaleDateString(LANG_LOCALE[currentLang] || 'en-US', { weekday: 'long', day: 'numeric', month: 'long' });
+    buildLangList();
+    render();
+  }
 
-  render();
+  const langBackdrop = document.getElementById('langBackdrop');
+  function buildLangList() {
+    const ll = document.getElementById('langList');
+    ll.innerHTML = LANGS.map(l => `<button type="button" class="lang-opt ${l===currentLang?'sel':''}" data-lang="${l}"><span>${LANG_NAMES[l]}</span><span>${l.toUpperCase()}</span></button>`).join('');
+    ll.querySelectorAll('[data-lang]').forEach(btn => btn.onclick = () => { applyLang(btn.dataset.lang); langBackdrop.classList.remove('open'); });
+  }
+  document.getElementById('langBtn').onclick = () => langBackdrop.classList.add('open');
+  langBackdrop.onclick = (e) => { if (e.target === langBackdrop) langBackdrop.classList.remove('open'); };
+
+  let initialLang = 'cs';
+  try {
+    const saved = localStorage.getItem(LANG_KEY);
+    if (saved && LANGS.includes(saved)) initialLang = saved;
+    else {
+      const nav = (navigator.language || 'cs').slice(0,2).toLowerCase();
+      if (LANGS.includes(nav)) initialLang = nav;
+    }
+  } catch(e) {}
+
+  applyLang(initialLang);
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
+  }
 })();
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
-  });
-}
 </script>
 </body>
 </html>
